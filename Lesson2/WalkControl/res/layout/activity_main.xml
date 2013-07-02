@@ -1,0 +1,129 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+
+ <TextView 
+		    android:layout_weight="1"
+		    android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/ll_F"
+	        android:id="@+id/tv2"
+	        android:layout_marginTop="10dp"
+	        android:textSize="8pt"
+	        android:text="Move To (Locomotion control)"/>  
+	        
+	  <LinearLayout
+        android:id="@+id/ll_DX"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv2"
+        
+	    android:layout_marginTop="100dp"
+        android:orientation="horizontal" >
+        
+		<TextView
+		    android:layout_weight="1"
+		    android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:id="@+id/tvDX"
+	        android:text="Distance X[-5 to 10m]:"/>
+		 <EditText
+		 android:layout_weight="1"
+	     android:id="@+id/editTextDX"
+	     android:layout_width="fill_parent"
+	     android:layout_height="wrap_content"	
+	     android:inputType="numberDecimal|numberSigned"     
+	     android:ems="10"
+	     android:text="0.5" >
+
+	     <requestFocus />
+		 </EditText>
+	</LinearLayout>	
+	<LinearLayout
+        android:id="@+id/ll_DY"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_DX"
+        android:orientation="horizontal" >
+        
+		<TextView
+		    android:layout_weight="1"
+		    android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:id="@+id/tvDY"
+	        android:text="Distance Y[-5 to 5m]:"/>
+		 <EditText
+		 android:layout_weight="1"
+	     android:id="@+id/editTextDY"
+	     android:layout_width="fill_parent"
+	     android:layout_height="wrap_content"	     
+	     android:inputType="numberDecimal|numberSigned"
+	     android:ems="10" 
+	     android:text="0.0">
+
+	     <requestFocus />
+		 </EditText>
+	</LinearLayout>	
+	<LinearLayout
+        android:id="@+id/ll_DT"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_DY"
+        android:orientation="horizontal" >
+        
+		<TextView
+		    android:layout_weight="1"
+		    android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:id="@+id/tvDT"
+	        android:text="Theta[-3.14 to 3.14]:"/>
+		 <EditText
+		 android:layout_weight="1"
+	     android:id="@+id/editTextDT"
+	     android:layout_width="fill_parent"
+	     android:layout_height="wrap_content"	
+	     android:inputType="numberDecimal|numberSigned"     
+	     android:ems="10" 
+	     android:text="0.0">
+
+	     <requestFocus />
+		 </EditText>
+	</LinearLayout>	
+	 <LinearLayout  
+	    android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/ll_bottom"
+        android:layout_alignParentBottom="true">
+		
+		<Button
+		    android:layout_weight="1"
+		    android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:id="@+id/bMove"
+	        android:text="Move"/>
+		
+		<Button
+		    android:layout_weight="1"
+		    android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:id="@+id/bStop"
+	        android:text="Stop"/>
+	</LinearLayout>
+
+	 <TextView
+	     android:id="@+id/textStatus"
+	     android:layout_width="wrap_content"
+	     android:layout_height="wrap_content"
+	     android:layout_alignLeft="@+id/ll_DT"
+	     android:layout_below="@+id/ll_DT"
+	     android:text=" " />
+    
+</RelativeLayout>
