@@ -26,6 +26,7 @@ public class MainActivity extends RobotActivity {
 	private String jN;
 	float anglevalue;
 	float timevalue;
+	
 	boolean isAbsolutevalue;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
