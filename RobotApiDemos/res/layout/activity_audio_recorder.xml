@@ -1,0 +1,178 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".AudioRecorder" >
+
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+        
+        <LinearLayout 
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal">
+           
+           <TextView
+               android:id="@+id/tvAudioFormats"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Format:"
+               android:textAppearance="?android:attr/textAppearanceMedium"
+               android:layout_weight="1" />
+       
+           <Spinner
+               android:id="@+id/spAudioFormats"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_weight="2" />
+            
+        </LinearLayout>
+        
+        <LinearLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            
+            <TextView
+                android:id="@+id/tvAudioSampleRates"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sample rate:"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_weight="1" />
+        
+            <Spinner
+                android:id="@+id/spAudioSampleRates"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2" />
+            
+        </LinearLayout>
+        
+        <LinearLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            
+            <TextView
+                android:id="@+id/tvAudioChannels"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Channel:"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_weight="1" />
+        
+            <Spinner
+                android:id="@+id/spAudioChannels"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2" />
+            
+        </LinearLayout>
+             
+        <LinearLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            
+        <TextView
+                android:id="@+id/tvAudioFolderPath"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Audio folder path (in Robot):" />
+        
+        </LinearLayout>
+        
+        <LinearLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+          
+          <EditText
+             android:id="@+id/etAudioFolderPath"
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content"
+             android:text="tmp" >
+             <requestFocus />
+          </EditText>
+            
+        </LinearLayout>
+        
+        <LinearLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            
+            <TextView
+                android:id="@+id/tvAudioFileName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Audio file name (in Robot):" />
+        
+        </LinearLayout>
+        
+        <LinearLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+          
+            <EditText
+                 android:id="@+id/etAudioFileName"
+                 android:layout_width="fill_parent"
+                 android:layout_height="wrap_content"
+                 android:text="audio.wav" >
+                 <requestFocus />
+                 
+          </EditText>
+            
+        </LinearLayout> 
+        
+        <LinearLayout 
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                
+                <TextView
+                    android:id="@+id/tvAudioRecordingTimer"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="00:00"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+        
+        </LinearLayout>
+        
+        <LinearLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:gravity="bottom">
+      
+            <Button
+                android:id="@+id/btStartAudioRecording"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:text="Start Record" />
+            
+            <Button
+                android:id="@+id/btStopAudioRecording"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:text="Stop Record" />
+      
+        </LinearLayout>
+        
+    </LinearLayout>
+
+</RelativeLayout>

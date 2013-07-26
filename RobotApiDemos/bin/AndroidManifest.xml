@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.fpt.robot.example.apis"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="15" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.fpt.robot.example.apis.RobotApiDemos"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.fpt.robot.category.ROBOT_APP" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.fpt.robot.example.apis.audio.AudioDeviceSetVolume"
+            android:label="Audio/Audio Device/Set Volume" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.fpt.robot.category.DEMO_APP" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.fpt.robot.example.apis.audio.AudioPlayLocalFile"
+            android:label="Audio/Audio Player/Play from local" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.fpt.robot.category.DEMO_APP" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.fpt.robot.example.apis.audio.AudioRecorder"
+            android:label="Audio/Audio Recorder" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.fpt.robot.category.DEMO_APP" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.fpt.robot.example.apis.audio.TextToSpeech"
+            android:label="Audio/Text To Speech" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.fpt.robot.category.DEMO_APP" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.fpt.robot.example.apis.audio.SpeechRecognition"
+            android:label="Audio/Speech Recognition" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.fpt.robot.category.DEMO_APP" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.fpt.robot.example.apis.behaviors.BehaviorManager"
+            android:label="Behaviors/Behavior Manager" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.fpt.robot.category.DEMO_APP" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.fpt.robot.example.apis.misc.FileTransfer"
+            android:label="Misc/File Transfer" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.fpt.robot.category.DEMO_APP" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.fpt.robot.example.apis.misc.InfraRed"
+            android:label="Misc/InfraRed" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.fpt.robot.category.DEMO_APP" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.fpt.robot.example.apis.misc.Leds"
+            android:label="Misc/Leds" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.fpt.robot.category.DEMO_APP" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.fpt.robot.example.apis.MotionActions"
+            android:label="Motion/Actions" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.fpt.robot.category.DEMO_APP" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.fpt.robot.example.apis.motion.MotionStiffness"
+            android:label="Motion/Stiffness" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.fpt.robot.category.DEMO_APP" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.fpt.robot.example.apis.motion.MotionJointsAngleController"
+            android:label="Motion/Joint" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.fpt.robot.category.DEMO_APP" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.fpt.robot.example.apis.motion.MotionPositionChange"
+            android:label="Motion/Cartesian/Position Change" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.fpt.robot.category.DEMO_APP" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.fpt.robot.example.apis.motion.MotionPositionInterpolation"
+            android:label="Motion/Cartesian/Position Interpolation" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.fpt.robot.category.DEMO_APP" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.fpt.robot.example.apis.motion.MotionPositionInterpolations"
+            android:label="Motion/Cartesian/Position Interpolations" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.fpt.robot.category.DEMO_APP" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.fpt.robot.example.apis.motion.MotionLocomotionController"
+            android:label="Motion/Locomotion" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.fpt.robot.category.DEMO_APP" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.fpt.robot.example.apis.motion.MotionGeneral"
+            android:label="Motion/General" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.fpt.robot.category.DEMO_APP" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.fpt.robot.example.apis.motion.MotionOthers"
+            android:label="Motion/Others" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.fpt.robot.category.DEMO_APP" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.fpt.robot.example.apis.plugins.FrameworkPlugin"
+            android:label="Plugins/Test Plugin" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.fpt.robot.category.DEMO_APP" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.fpt.robot.example.apis.sensors.Sensors"
+            android:label="Sensors/Sensors" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.fpt.robot.category.DEMO_APP" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.fpt.robot.example.apis.sensors.SensorSonar"
+            android:label="Sensors/Sonar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.fpt.robot.category.DEMO_APP" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.fpt.robot.example.apis.sensors.SensorInertial"
+            android:label="Sensors/Inertial" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.fpt.robot.category.DEMO_APP" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.fpt.robot.example.apis.sensors.SensorBattery"
+            android:label="Sensors/Battery" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.fpt.robot.category.DEMO_APP" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.fpt.robot.example.apis.sensors.SensorFsr"
+            android:label="Sensors/Fsr" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.fpt.robot.category.DEMO_APP" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.fpt.robot.example.apis.sensors.SensorTemperature"
+            android:label="Sensors/Temperature" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.fpt.robot.category.DEMO_APP" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.fpt.robot.example.apis.sensors.SensorJointPosition"
+            android:label="Sensors/Joint Position" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.fpt.robot.category.DEMO_APP" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.fpt.robot.example.apis.sensors.SensorElectricCurrent"
+            android:label="Sensors/Electric Current" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.fpt.robot.category.DEMO_APP" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.fpt.robot.example.apis.event.EventSubscriberUnsubscriber"
+            android:label="Event/Subscriber - Unsubscriber" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.fpt.robot.category.DEMO_APP" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.fpt.robot.example.apis.tracking.Tracking"
+            android:label="Tracking/Tracking" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.fpt.robot.category.DEMO_APP" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.fpt.robot.example.apis.tracking.FaceTracking"
+            android:label="Tracking/Face Tracking" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.fpt.robot.category.DEMO_APP" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.fpt.robot.example.apis.tracking.RedBallTracking"
+            android:label="Tracking/RedBall Tracking" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.fpt.robot.category.DEMO_APP" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.fpt.robot.example.apis.tracking.SoundTracking"
+            android:label="Tracking/Sound Tracking" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.fpt.robot.category.DEMO_APP" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.fpt.robot.example.apis.tracking.LineTracking"
+            android:label="Tracking/Line Tracking" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.fpt.robot.category.DEMO_APP" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.fpt.robot.example.apis.vision.detection.VisionDetection"
+            android:label="Vision Detection/Vision Detection" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.fpt.robot.category.DEMO_APP" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.fpt.robot.example.apis.vision.detection.LandMarkDetection"
+            android:label="Vision Detection/LandMark Detection" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.fpt.robot.category.DEMO_APP" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.fpt.robot.example.apis.vision.detection.RedBallDetection"
+            android:label="Vision Detection/RedBall Detection" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.fpt.robot.category.DEMO_APP" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.fpt.robot.example.apis.vision.detection.FaceDetection"
+            android:label="Vision Detection/Face Detection" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.fpt.robot.category.DEMO_APP" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.fpt.robot.example.apis.vision.detection.FaceCropDetection"
+            android:label="Vision Detection/FaceCrop Detection" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.fpt.robot.category.DEMO_APP" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.fpt.robot.example.apis.vision.recognition.VisionRecognition"
+            android:label="Vision Recognition/Vision Recognition" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.fpt.robot.category.DEMO_APP" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.fpt.robot.example.apis.vision.recognition.FlashcardRecognition"
+            android:label="Vision Recognition/Vision Recognition" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.fpt.robot.category.DEMO_APP" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.fpt.robot.example.apis.vision.detection.LineDetection"
+            android:label="Vision Detection/Line Detection" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.fpt.robot.category.DEMO_APP" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.fpt.robot.example.apis.vision.CameraPreview"
+            android:label="Camera/Camera Preview" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.fpt.robot.category.DEMO_APP" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.fpt.robot.example.apis.vision.TakePicture"
+            android:label="Camera/Take Picture" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.fpt.robot.category.DEMO_APP" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.fpt.robot.example.apis.motion.MotionGestureController"
+            android:label="Motion/Gestures Behavior" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.fpt.robot.category.DEMO_APP" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.fpt.robot.example.apis.vision.GetCameraImage"
+            android:label="Camera/Get Camera Image" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.fpt.robot.category.DEMO_APP" />
+            </intent-filter>
+        </activity>
+        
+    </application>
+
+</manifest>
